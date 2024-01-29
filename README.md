@@ -1,3 +1,7 @@
+# General Info
+
+This is an orchard management application. A school project that uses the Angular framework.
+
 # OrchardManagementApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
