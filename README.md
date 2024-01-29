@@ -2,6 +2,16 @@
 
 This is an orchard management application. A school project that uses the Angular framework.
 
+Employee view pass:
+
+Login: u1
+Pass: pass1
+
+Manager view pass:
+
+Login: m1
+pass: mpass1
+
 # OrchardManagementApplication
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
