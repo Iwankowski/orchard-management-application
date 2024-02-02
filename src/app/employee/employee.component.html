@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8 border p-3 my-2">
+        <h2 class="text-dark text-center">Dodawanie zbioru</h2>
+        <form (ngSubmit)="addReport()">
+          <div class="mb-3">
+            <label for="plantationName" class="form-label">Nazwa Plantacji</label>
+            <input type="text" class="form-control" id="plantationName" [(ngModel)]="newReport.plantationName" name="plantationName" required>
+          </div>
+          <div class="mb-3">
+            <label for="harvestedKg" class="form-label">Zebrane kilogramy</label>
+            <input type="number" class="form-control" id="harvestedKg" [(ngModel)]="newReport.harvestedKg" name="harvestedKg" required>
+          </div>
+          <div class="mb-3 text-center">
+            <button type="submit" class="btn btn-primary">Dodaj Raport</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

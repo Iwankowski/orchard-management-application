@@ -1,0 +1,90 @@
+<div class="container mt-4 border">
+  <div class="row">
+    <div class="col-md-3 border-end">
+      <div class="border-bottom mb-3">
+        <h2 class="text-dark">Dodawanie Plantacji</h2>
+      </div>
+      <form (ngSubmit)="addPlantation()">
+        <div class="mb-3">
+          <label for="harvest" class="form-label">Nazwa</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="newPlantation.name" name="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="location" class="form-label">Miejscowość</label>
+          <input type="text" class="form-control" id="location" [(ngModel)]="newPlantation.location" name="location" required>
+        </div>
+        <div class="mb-3">
+          <label for="harvest" class="form-label">Odmiana</label>
+          <input type="text" class="form-control" id="harvest" [(ngModel)]="newPlantation.harvest" name="harvest" required>
+        </div>
+        <div class="mb-3">
+          <label for="harvest" class="form-label">Data założenia</label>
+          <input type="date" class="form-control" id="creationDate" [(ngModel)]="newPlantation.creationDate" name="creationDate" required>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-primary mx-1">Dodaj Plantację</button>
+          <button type="button" class="btn btn-secondary" (click)="updatePlantation()">Zapisz</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-9">
+      <div class="border p-3 my-2 text-center">
+        <h2 class="text-dark">Tabela Plantacji</h2>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Lp.</th>
+              <th scope="col">Nazwa</th>
+              <th scope="col">Miejscowość</th>
+              <th scope="col">Odmiana</th>
+              <th scope="col">Data założenia</th>
+              <th scope="col">Akcje</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let plantation of plantations; let i = index">
+              <th scope="row">{{ i + 1 }}</th>
+              <td>{{ plantation.name }}</td>
+              <td>{{ plantation.location }}</td>
+              <td>{{ plantation.harvest }}</td>
+              <td>{{ plantation.creationDate }}</td>
+              <td>
+                <button type="button" class="btn btn-warning" (click)="editPlantation(i)">Edytuj</button>
+                <button type="button" class="btn btn-danger" (click)="deletePlantation(i)">Usuń</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  
+  <div class="row">
+    <div class="border p-3 my-4 col-md-9 mx-auto text-center">
+      <h2 class="text-dark">Tabela Raportów</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Lp.</th>
+            <th scope="col">Nazwa Plantacji</th>
+            <th scope="col">Zebrane kilogramy</th>
+            <th scope="col">Kto dodał</th>
+            <th scope="col">Akcje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let report of reports; let i = index">
+            <th scope="row">{{ i + 1 }}</th>
+            <td>{{ report.plantationName }}</td>
+            <td>{{ report.harvestedKg }}</td>
+            <td>{{ report.createdBy }}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)="deleteReport(i)">Usuń Raport</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>

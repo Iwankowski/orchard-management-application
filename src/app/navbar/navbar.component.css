@@ -1,0 +1,24 @@
+.custom-link {
+    font-family: Calibri;
+    font-size: large;
+}
+
+.brand {
+  padding-right: 2rem;
+  border-right: 1px solid #000;
+  color: #327a2c;
+}
+
+.brand:hover {
+    color: #535f53;
+}
+
+.login {
+    text-transform: uppercase;
+    font-family: Calibri;
+    font-size: large;
+}
+
+.login:hover {
+    cursor:pointer;
+}

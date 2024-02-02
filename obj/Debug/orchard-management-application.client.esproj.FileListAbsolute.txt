@@ -1,0 +1,1 @@
+C:\Users\forth\source\repos\orchard-management-application\orchard-management-application.client\obj\Debug\orchard-management-application.client.esproj.CoreCompileInputs.cache
